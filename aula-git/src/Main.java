@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import animal.Animal;
 
 public class Main {
     public static void main(String[] args){
