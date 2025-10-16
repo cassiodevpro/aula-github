@@ -1,3 +1,4 @@
+package produtos;
 import java.util.Scanner;
 
 public class Main {
@@ -73,7 +74,6 @@ public class Main {
                     System.out.println("Opção inválida. Tente novamente.");
             }
 
-            // Impressão a cada loop
             if (produto != null) {
                 System.out.println("\n--- DADOS ATUAIS DO PRODUTO ---");
                 System.out.println("Nome: " + produto.getNome());
@@ -83,7 +83,7 @@ public class Main {
                 System.out.printf("Valor total em estoque: R$%.2f\n", produto.calcularValorEstoque());
             }
 
-            System.out.println(""); // Linha em branco para separar os loops
+            System.out.println("");
 
         } while (opcao != 5 && opcao != 0);
 

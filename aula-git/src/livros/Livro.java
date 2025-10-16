@@ -9,8 +9,6 @@ public class Livro {
     private int anoPublicacao;
     private int quantidadePagina;
 
-
-
     public Livro(String titulo, String autor, int anoPublicacao, int quantidadePagina) {
         this.titulo = titulo;
         this.autor = autor;
@@ -50,7 +48,7 @@ public class Livro {
         this.quantidadePagina = quantidadePagina;
     }
 
-    public String exibirInformacoes(){
+    public void exibirInformacoes() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o nome do livro: ");
         this.setTitulo(scanner.nextLine());
@@ -63,17 +61,13 @@ public class Livro {
         System.out.println("Autor: " + autor
                 + "\ncTitulo: " + titulo
                 + "\nAno publicação: " + anoPublicacao
-                + "\nQuantidade de paginas:  " + quantidadePagina );
-
-        return "infos: ";
-
+                + "\nQuantidade de paginas:  " + quantidadePagina);
+        scanner.close();
     }
 
-    public  void calcularTempoLeitura() {
+    public int calcularTempoLeitura() {
         Scanner teclado = new Scanner(System.in);
-
         int opcao = 0;
-
         do {
             System.out.println("### CALCULO DIAS DE LEITURA ###");
             System.out.println("Se ler de 1  paginas por dia digite 1: ");
@@ -85,28 +79,24 @@ public class Livro {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Vai ler ====> " + this.quantidadePagina/1 + " pginas mes");
+                    System.out.println("Tempo de leitura ====> " + this.quantidadePagina / 1 + " dias");
                     break;
                 case 2:
-                    System.out.println("Vai ler ====> " + this.quantidadePagina/4 + " pginas mes");
+                    System.out.println("Tempo de leitura ====> " + this.quantidadePagina / 4 + " dias");
                     break;
                 case 3:
-                    System.out.println("Vai ler ====> " + this.quantidadePagina/8 + " pginas mes");
+                    System.out.println("Tempo de leitura ====> " + this.quantidadePagina / 8 + " dias");
                     break;
                 case 4:
-                    System.out.println("Vai ler ====> " + this.quantidadePagina/10 + " pginas mes");
+                    System.out.println("Tempo de leitura ====> " + this.quantidadePagina / 10 + " dias");
                     break;
                 default:
                     System.out.println("Valor invalido");
 
             }
-        }while (opcao != 0);
+        } while (opcao != 0);
 
-        
-       teclado.close();
+        teclado.close();
+        return quantidadePagina;
     }
-    }
-
-
-
-
+}

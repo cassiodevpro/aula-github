@@ -1,3 +1,5 @@
+package atleta;
+
 import java.util.Scanner;
 
 public class Main {
@@ -15,7 +17,7 @@ public class Main {
             System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
-            scanner.nextLine(); // consumir quebra de linha
+            scanner.nextLine();  
 
             switch (opcao) {
                 case 1:
@@ -88,7 +90,6 @@ public class Main {
                     System.out.println("Opção inválida. Tente novamente.");
             }
 
-            // Exibir os dados do atleta após cada operação, se houver
             if (atleta != null) {
                 atleta.exibirInformacoes();
             }

@@ -1,3 +1,6 @@
+
+package atleta;
+
 public class Atleta {
     private String nome;
     private String modalidade;
